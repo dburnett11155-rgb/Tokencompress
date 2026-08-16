@@ -1,4 +1,4 @@
-# ⚡ tokencompress (v1.1.0)
+# ⚡ TokenCompress (v1.1.0)
 
 > A zero-dependency, sub-millisecond Go CLI and MCP sidecar that prunes raw tool outputs (JSON, terminal logs, HTML) before they enter your AI agent's context window.
 
