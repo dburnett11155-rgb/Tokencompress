@@ -40,10 +40,10 @@ When AI agents execute tools (calling APIs, running terminal commands, or scrapi
 
 ---
 
-## 🚀 Quickstart
+## 🚀 Installation
 
-### Option A: Install Pre-Built Binaries (Pro)
-Download the `$29 Pro Kit` from [Gumroad](https://burnettwave53.gumroad.com/l/nixgh), extract the package, and run the included installer:
+Download the **Pro Kit ($29)** from [Gumroad](https://burnettwave53.gumroad.com/l/nixgh), extract the package, and run the included installer:
+
 ```bash
 # macOS / Linux
 chmod +x install.sh && ./install.sh
@@ -51,18 +51,6 @@ chmod +x install.sh && ./install.sh
 # Windows (PowerShell)
 .\install.ps1
 ```
-
-### Option B: Build From Source (Open Source CLI)
-Requires Go 1.22 or higher installed:
-
-```bash
-git clone [https://github.com/dburnett11155-rgb/Tokencompress.git](https://github.com/dburnett11155-rgb/Tokencompress.git)
-cd Tokencompress
-make build
-sudo mv tokencompress /usr/local/bin/
-```
-
----
 
 ## 💻 CLI Usage Examples
 
