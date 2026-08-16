@@ -1,0 +1,17 @@
+#!/bin/bash
+# tokencompress wrapper with config support (uses global binary)
+CONFIG_FILE="${TOKENCOMPRESS_CONFIG:-$HOME/.tokencompress.conf}"
+ARGS=()
+
+if [ -f "$CONFIG_FILE" ]; then
+  while IFS='=' read -r key value; do
+    case "$key" in
+      \#*|"") continue ;;
+      JSON_MAX_ITEMS) ARGS+=("--json-max-items=$value") ;;
+      JSON_KEEP_FIRST) ARGS+=("--json-keep-first=$value") ;;
+      LOG_INTERNAL_MARKERS) IFS=',' read -ra markers <<< "$value"; for m in "${markers[@]}"; do ARGS+=("--log-internal-marker=$m"); done ;;
+    esac
+  done < "$CONFIG_FILE"
+fi
+
+exec tokencompress "${ARGS[@]}" "$@"
