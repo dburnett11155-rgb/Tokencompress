@@ -4,31 +4,42 @@
 
 Cut LLM context token consumption by **60% to 80%** without using a second LLM summarization turn.
 
+[![Buy TokenCompress Pro](https://img.shields.io/badge/Gumroad-TokenCompress%20Pro%20%2429-2EA44F?style=for-the-badge&logo=gumroad)](https://burnettwave53.gumroad.com/l/nixgh)
+
+---
+
+## ⚡ Get TokenCompress Pro (9)
+
+For instant pre-compiled binaries and turnkey configuration files, grab the **Pro Kit on Gumroad**:
+👉 **[Download TokenCompress Pro (9)](https://burnettwave53.gumroad.com/l/nixgh)**
+
+* **Ready-to-Use Executables:** Windows (), macOS (Apple Silicon/Intel), Linux
+* **Pre-Configured MCP Settings:** Drop-in configs for Claude Desktop, Cursor, and AutoGen
+* **Commercial License:** Use across unlimited team or enterprise workflows
+
 ---
 
 ## 💡 The Problem
 
 When AI agents execute tools (calling APIs, running terminal commands, or scraping web pages), they receive thousands of lines of raw, unparsed data:
 * **Massive JSON Payloads:** A 1,000-item array floods the prompt with 15,000+ tokens.
-* **Verbose Stack Traces:** Framework noise and node_modules paths drown out the root exception.
-* **Raw HTML:** CSS, scripts, and navigation menus bloat the context window.
-
-This leads to high API costs, slower response times, and **context rot**—where agents hallucinate or repeat tool calls mid-task.
+* **Verbose Stack Traces:** Framework noise drowning out root exceptions.
+* **Raw HTML:** CSS, scripts, and navigation menus bloating context windows.
 
 ---
 
 ## ⚡ The Solution
 
- acts as a high-speed, deterministic filter between your tools and your model:
+ acts as a high-speed filter between your tools and your model:
 
 * **JSON Truncation:** Keeps representative schema examples and replaces redundant array items with metadata (: N).
-* **Log Pruning:** Strips internal framework paths and returns only the root error message, user file paths, and execution lines.
-* **HTML Cleaning:** Strips scripts, styles, and navigation elements, converting content to readable text/markdown.
-* **Duplicate Loop Detection:** Hashes tool outputs per session and prepends a warning header if an agent receives duplicate tool results twice in a row.
+* **Log Pruning:** Strips internal framework paths and isolates root exceptions and user code.
+* **HTML Cleaning:** Converts raw web scrapes to clean Markdown/text.
+* **Duplicate Loop Detection:** Hashes tool outputs per session and warns models if they receive identical tool results repeatedly.
 
 ---
 
-## 🚀 Quickstart
+## 🚀 Quickstart (Open Source CLI)
 
 ### 1. Installation
 make build
@@ -44,18 +55,6 @@ cat app.log | tokencompress --mode log --log-internal-marker "mycompany/internal
 # Clean raw HTML
 curl -s https://example.com | tokencompress --mode html
 
-### 3. MCP (Model Context Protocol) Integration
-Add  directly to your Claude Desktop config ():
-
-{
-  "mcpServers": {
-    "tokencompress": {
-      "command": "/usr/local/bin/tokencompress",
-      "args": ["--mode", "mcp"]
-    }
-  }
-}
-
 ---
 
 ## 📊 Benchmarks
@@ -70,13 +69,12 @@ Add  directly to your Claude Desktop config ():
 
 ## 💼 Custom Integrations & Consulting
 
-Need a custom high-performance MCP proxy, specialized parsers for enterprise tools, or custom token-optimization setups for your agent infrastructure?
+Need a custom high-performance MCP proxy, specialized parsers for enterprise tools, or team context setup?
 
 * **Custom Setup Gigs:** 50 - 00 per custom integration setup.
-* **Custom Log/AST Parsers:** 50 per custom domain parser.
-* **Contact:** Open an issue on this repository or contact directly via GitHub profile.
+* **Contact:** Open an issue on this repository or reach out via GitHub profile.
 
 ---
 
 ## 📜 License
-MIT License. Free to use in open-source and commercial agent setups.
+MIT License.
