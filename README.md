@@ -70,10 +70,11 @@ Add  directly to your Claude Desktop config ():
 
 ## 💼 Custom Integrations & Consulting
 
-Need a custom high-performance MCP proxy, specialized parsers for internal enterprise tools, or custom token-optimization setups for your agent infrastructure?
+Need a custom high-performance MCP proxy, specialized parsers for enterprise tools, or custom token-optimization setups for your agent infrastructure?
 
 * **Custom Setup Gigs:** 50 - 00 per custom integration setup.
-* **Contact:** Open an issue or reach out via GitHub profile.
+* **Custom Log/AST Parsers:** 50 per custom domain parser.
+* **Contact:** Open an issue on this repository or contact directly via GitHub profile.
 
 ---
 
